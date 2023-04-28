@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  keycloak-master:
+    image: jboss/keycloak:latest
+    ports:
+      - "9292:8080"
+    environment:
+      - KEYCLOAK_USER=admin
+      - KEYCLOAK_PASSWORD=admin
+    volumes:
+        - ./keycloak-config/realm.json:/tmp/realm.json
+        - ./keycloak-config/user.json:/tmp/user.json
+    command:
+        - "-Dkeycloak.import=/tmp/realm.json,/tmp/user.json"
+
+volumes:
+  keycloak-data:

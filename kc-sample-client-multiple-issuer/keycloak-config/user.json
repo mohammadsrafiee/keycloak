@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "username": "bob",
+      "enabled": true,
+      "emailVerified": true,
+      "firstName": "bob",
+      "lastName": "bob",
+      "email": "bob@example.com",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "bob",
+          "temporary": false
+        }
+      ]
+    }
+  ]
+}
